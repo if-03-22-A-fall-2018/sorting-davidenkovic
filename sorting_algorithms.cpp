@@ -11,14 +11,18 @@
  *-----------------------------------------------------------------------------
 */
 #include "sorting_algorithms.h"
-
+#include <stdlib.h>
 
 void 	init_random (int *array, unsigned long length){
-
+  for (int i = 0; i < length; i++) {
+    array[i] = rand()%100;
+  }
 }
-
 void 	bubble_sort (int *array, unsigned long length){
-   int i, j,tmp;
+   int i;
+   int j;
+   int tmp;
+
    for (i = 1; i < length ; i++){
       for (j = 0; j < length - i ; j++){
           if (array[j] > array[j+1]){
@@ -29,9 +33,11 @@ void 	bubble_sort (int *array, unsigned long length){
       }
    }
 }
-
 void 	insertion_sort (int *array, unsigned long length){
-  int i, key, j;
+  int i;
+  int key;
+  int j;
+
    for (i = 1; i < length; i++) {
        key = array[i];
        j = i-1;
