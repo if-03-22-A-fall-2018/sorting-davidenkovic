@@ -12,7 +12,7 @@
 */
 #include <math.h>
 #include <unistd.h>
-
+#include "sorting_algorithms.h"
 #include "stopwatch.h"
 #include "test_stopwatch.h"
 
